@@ -58,7 +58,8 @@ function setBackground(root, appLayout, lovelace, bgroundElem) {
       if (!entityValidViews.includes(currentview)) continue; //if views have been specified check they match the current view
     }
 
-    const backgroundUrl = entityInfo.attributes[entityImageAttribute];
+//    const backgroundUrl = entityInfo.attributes[entityImageAttribute];
+    const backgroundUrl = input_text.coverart;
     if (!backgroundUrl) continue;
 
     bgroundElem.style.backgroundImage = `url('${backgroundUrl}')`
