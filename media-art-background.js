@@ -63,6 +63,8 @@ function setBackground(root, appLayout, lovelace, bgroundElem) {
     if (!backgroundUrl) continue;
 
     bgroundElem.style.backgroundImage = `url('${backgroundUrl}')`
+    bgroundElem.style.backgroundImage = `url('https://amund.zapto.org:1883/DireStraits-BrothersInArms.jpeg')`
+
     bgroundElem.style.opacity = maxOpacity;
 
     // disable user background
