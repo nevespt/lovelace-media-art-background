@@ -45,7 +45,7 @@ function setBackground(root, appLayout, lovelace, bgroundElem) {
     let entityValidViews = entity.views; //get a list of valid views
     let currentview = window.location.pathname.substring(window.location.pathname.lastIndexOf('/')+1);
 
-    let entityInfo = hass.states[entityName];
+    let entityInfo = hass.states['input_text.coverart'];
 
     if (!entityInfo) {
       console.log(`Couldn't find entity ${entityName}`);
@@ -59,7 +59,7 @@ function setBackground(root, appLayout, lovelace, bgroundElem) {
     }
 
 //    const backgroundUrl = entityInfo.attributes[entityImageAttribute];
-    const backgroundUrl = input_text.coverart;
+    const backgroundUrl = entityInfo.state;
     if (!backgroundUrl) continue;
 
     bgroundElem.style.backgroundImage = `url('${backgroundUrl}')`
