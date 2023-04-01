@@ -60,7 +60,7 @@ function setBackground(root, appLayout, lovelace, bgroundElem) {
 
 //    const backgroundUrl = entityInfo.attributes[entityImageAttribute];
     const backgroundUrl = entityImageSource.state;
-    if (!backgroundUrl) continue;
+//    if (!backgroundUrl) continue;
 
     bgroundElem.style.backgroundImage = `url('${backgroundUrl}')`
 //    bgroundElem.style.backgroundImage = `url("https://amund.zapto.org:1883/DireStraits-BrothersInArms.jpeg")`
