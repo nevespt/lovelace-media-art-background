@@ -41,14 +41,15 @@ function setBackground(root, appLayout, lovelace, bgroundElem) {
     // get config attributes or default values
     let entityName = entity.entity || entity;
     let entityValidSource = entity.valid_source || ['vinyl'];
+    let urlEntity = entity.url_source || 'input_text.coverart';
     let entityImageAttribute = entity.image_attribute || 'entity_picture';
     let entityValidViews = entity.views; //get a list of valid views
     let currentview = window.location.pathname.substring(window.location.pathname.lastIndexOf('/')+1);
 
-    let entityInfo = hass.states[entityName];
+    let entityInfo = hass.states[urlEntity];
 
     if (!entityInfo) {
-      console.log(`Couldn't find entity ${entityName}`);
+      console.log(`Couldn't find entity ${urlEntity}`);
       continue;
     }
 
@@ -59,11 +60,11 @@ function setBackground(root, appLayout, lovelace, bgroundElem) {
     }
 
 //    const backgroundUrl = entityInfo.attributes[entityImageAttribute];
-    const backgroundUrl = entityInfo;
+    const backgroundUrl = urlEntity;
     if (!backgroundUrl) continue;
 
-//    bgroundElem.style.backgroundImage = `url('${backgroundUrl}')`
-    bgroundElem.style.backgroundImage = `url("https://amund.zapto.org:1883/DireStraits-BrothersInArms.jpeg")`
+    bgroundElem.style.backgroundImage = `url('${backgroundUrl}')`
+//    bgroundElem.style.backgroundImage = `url("https://amund.zapto.org:1883/DireStraits-BrothersInArms.jpeg")`
     console.log(`Setter bakgrunnsbilde: ${bgroundElem.style.backgroundImage}`);
     
     bgroundElem.style.opacity = maxOpacity;
