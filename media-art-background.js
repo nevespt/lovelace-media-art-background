@@ -45,21 +45,21 @@ function setBackground(root, appLayout, lovelace, bgroundElem) {
     let entityValidViews = entity.views; //get a list of valid views
     let currentview = window.location.pathname.substring(window.location.pathname.lastIndexOf('/')+1);
 
-    let entityInfo = hass.states[entityImageSource];
+    let entityInfo = hass.states[entityName];
 
     if (!entityInfo) {
       console.log(`Couldn't find entity ${entityImageSource}`);
       continue;
     }
 
-    if (!entityValidSource.includes(entityName.source)) continue;
+    if (!entityValidSource.includes(entityInfo.attributes['source'])) continue;
 
     if (entityValidViews) {
       if (!entityValidViews.includes(currentview)) continue; //if views have been specified check they match the current view
     }
 
 //    const backgroundUrl = entityInfo.attributes[entityImageAttribute];
-    const backgroundUrl = entityImageSource;
+    const backgroundUrl = entityImageSource.state;
     if (!backgroundUrl) continue;
 
     bgroundElem.style.backgroundImage = `url('${backgroundUrl}')`
