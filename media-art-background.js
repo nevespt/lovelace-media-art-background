@@ -52,7 +52,7 @@ function setBackground(root, appLayout, lovelace, bgroundElem) {
       continue;
     }
 
-    if (!entityValidSource.includes(entityInfo.attributes['source'])) continue;
+    if (!entityValidSource.includes(entityInfo.attributes.source)) continue;
 
     if (entityValidViews) {
       if (!entityValidViews.includes(currentview)) continue; //if views have been specified check they match the current view
