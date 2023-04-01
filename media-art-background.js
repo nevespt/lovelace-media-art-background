@@ -40,27 +40,26 @@ function setBackground(root, appLayout, lovelace, bgroundElem) {
 
     // get config attributes or default values
     let entityName = entity.entity || entity;
-    let entityValidSource = entity.valid_source || ['vinyl'];
-    let urlEntity = entity.url_source || 'input_text.coverart';
-    let entityImageAttribute = entity.image_attribute || 'entity_picture';
+    let entityValidSource = entity.valid_source || ['Vinyl'];
+    let entityImageSource = entity.image_source || 'input_text.coverart';
     let entityValidViews = entity.views; //get a list of valid views
     let currentview = window.location.pathname.substring(window.location.pathname.lastIndexOf('/')+1);
 
-    let entityInfo = hass.states[urlEntity];
+    let entityInfo = hass.states[entityImageSource];
 
     if (!entityInfo) {
-      console.log(`Couldn't find entity ${urlEntity}`);
+      console.log(`Couldn't find entity ${entityImageSource}`);
       continue;
     }
 
-    if (!entityValidSource.includes(entityInfo.source)) continue;
+    if (!entityValidSource.includes(entityName.source)) continue;
 
     if (entityValidViews) {
       if (!entityValidViews.includes(currentview)) continue; //if views have been specified check they match the current view
     }
 
 //    const backgroundUrl = entityInfo.attributes[entityImageAttribute];
-    const backgroundUrl = urlEntity;
+    const backgroundUrl = entityImageSource;
     if (!backgroundUrl) continue;
 
     bgroundElem.style.backgroundImage = `url('${backgroundUrl}')`
