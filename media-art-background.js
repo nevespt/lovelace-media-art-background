@@ -40,19 +40,19 @@ function setBackground(root, appLayout, lovelace, bgroundElem) {
 
     // get config attributes or default values
     let entityName = entity.entity || entity;
-    let entityValidStates = entity.valid_states || ['playing'];
+    let entityValidSource = entity.valid_source || ['vinyl'];
     let entityImageAttribute = entity.image_attribute || 'entity_picture';
     let entityValidViews = entity.views; //get a list of valid views
     let currentview = window.location.pathname.substring(window.location.pathname.lastIndexOf('/')+1);
 
-    let entityInfo = hass.states['input_text.coverart'];
+    let entityInfo = hass.states[entityName];
 
     if (!entityInfo) {
       console.log(`Couldn't find entity ${entityName}`);
       continue;
     }
 
-    if (!entityValidStates.includes(entityInfo.state)) continue;
+    if (!entityValidSource.includes(entityInfo.source)) continue;
 
     if (entityValidViews) {
       if (!entityValidViews.includes(currentview)) continue; //if views have been specified check they match the current view
