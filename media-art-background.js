@@ -46,13 +46,14 @@ function setBackground(root, appLayout, lovelace, bgroundElem) {
     let currentview = window.location.pathname.substring(window.location.pathname.lastIndexOf('/')+1);
 
     let entityInfo = hass.states[entityName];
+    console.log(`Loading states from ${entityName}`);
 
     if (!entityInfo) {
       console.log(`Couldn't find entity ${entityImageSource}`);
       continue;
     }
 
-    if (!entityValidSource.includes(entityInfo.attributes.source)) continue;
+//    if (!entityValidSource.includes(entityInfo.attributes.source)) continue;
 
     if (entityValidViews) {
       if (!entityValidViews.includes(currentview)) continue; //if views have been specified check they match the current view
@@ -64,7 +65,7 @@ function setBackground(root, appLayout, lovelace, bgroundElem) {
 
     bgroundElem.style.backgroundImage = `url('${backgroundUrl}')`
 //    bgroundElem.style.backgroundImage = `url("https://amund.zapto.org:1883/DireStraits-BrothersInArms.jpeg")`
-    console.log(`Setter bakgrunnsbilde: ${bgroundElem.style.backgroundImage}`);
+    console.log(`Setter bakgrunnsbilde: ${backgroundUrl}`);
     
     bgroundElem.style.opacity = maxOpacity;
 
