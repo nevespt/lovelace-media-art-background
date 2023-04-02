@@ -47,7 +47,7 @@ function setBackground(root, appLayout, lovelace, bgroundElem) {
 
     let entityInfo = hass.states[entityName];
     let entityImageUrl = hass.states[entityImageSource]
-    console.log(`Loading states from ${entityName}`);
+    
 
     if (!entityInfo) {
       console.log(`Couldn't find entity ${entityImageSource}`);
@@ -60,14 +60,14 @@ function setBackground(root, appLayout, lovelace, bgroundElem) {
       if (!entityValidViews.includes(currentview)) continue; //if views have been specified check they match the current view
     }
 
-//    const backgroundUrl = entityInfo.attributes[entityImageAttribute];
+
     const backgroundUrl = entityImageUrl.state;
-//    if (!backgroundUrl) continue;
-    console.log(`Henter bakgrunnsbilde fra: ${entityImageSource}`);
+    if (!backgroundUrl) continue;
+
 
     bgroundElem.style.backgroundImage = `url('${backgroundUrl}')`
-//    bgroundElem.style.backgroundImage = `url("https://amund.zapto.org:1883/DireStraits-BrothersInArms.jpeg")`
-    console.log(`Setter bakgrunnsbilde: ${backgroundUrl}`);
+
+
     
     bgroundElem.style.opacity = maxOpacity;
 
