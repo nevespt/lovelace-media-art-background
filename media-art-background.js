@@ -46,6 +46,7 @@ function setBackground(root, appLayout, lovelace, bgroundElem) {
     let currentview = window.location.pathname.substring(window.location.pathname.lastIndexOf('/')+1);
 
     let entityInfo = hass.states[entityName];
+    let entityImageUrl = hass.states[entityImageSource]
     console.log(`Loading states from ${entityName}`);
 
     if (!entityInfo) {
@@ -60,7 +61,7 @@ function setBackground(root, appLayout, lovelace, bgroundElem) {
     }
 
 //    const backgroundUrl = entityInfo.attributes[entityImageAttribute];
-    const backgroundUrl = entityImageSource.state;
+    const backgroundUrl = entityImageUrl.state;
 //    if (!backgroundUrl) continue;
     console.log(`Henter bakgrunnsbilde fra: ${entityImageSource}`);
 
