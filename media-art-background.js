@@ -90,7 +90,7 @@ root = root.shadowRoot.querySelector("home-assistant-main").shadowRoot.querySele
 
 // get constant elements from HA root element
 //const appLayout = root.shadowRoot.querySelector("ha-app-layout");
-const appLayout = root.shadowRoot.querySelector("div. ");
+const appLayout = root.shadowRoot.querySelector("div.  ");
 const lovelace = root.lovelace;
 
 // create container element, set style and append to container
