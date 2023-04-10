@@ -5,8 +5,8 @@ function setupStyle(lovelace, bgroundElem) {
   let filterBlur = lovelace.config.media_art_background.blur || '10px'; // default -> blur 10 pixels
 
   // apply style to background element
-  bgroundElem.style.position = "fixed"; // fill entire window
-  bgroundElem.style.top = "var(--header-height);";
+  bgroundElem.style.position = "absolute"; // fill entire window
+  bgroundElem.style.top = 0;
   bgroundElem.style.left = 0;
   bgroundElem.style.width = "100%";
   bgroundElem.style.height = "100%";
