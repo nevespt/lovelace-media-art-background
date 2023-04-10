@@ -13,8 +13,8 @@ function setupStyle(lovelace, bgroundElem) {
   bgroundElem.style.maxWidth = "100vw";
   bgroundElem.style.maxHeight = "100vh";
 
-  bgroundElem.style.opacity = 0;
-  bgroundElem.style.transition = "opacity " + transitionOpacity;
+  bgroundElem.style.opacity = 0.3;
+ // bgroundElem.style.transition = "opacity " + transitionOpacity;
 
   bgroundElem.style.backgroundRepeat = 'no-repeat';
   bgroundElem.style.backgroundPosition = 'center';
@@ -100,5 +100,5 @@ appLayout.appendChild(bgroundElem);
 //appLayout.shadowRoot.querySelector("hui-view").style.transform = "none";
 //appLayout.shadowRoot.querySelector("#contentContainer").style.transform = "none";
 
-setInterval(function () { setBackground(root, appLayout, lovelace, bgroundElem) }, 5000);
+setInterval(function () { setBackground(root, appLayout, lovelace, bgroundElem) }, 20000);
 setBackground(root, appLayout, lovelace, bgroundElem);
