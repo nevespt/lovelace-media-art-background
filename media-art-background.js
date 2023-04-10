@@ -73,7 +73,7 @@ function setBackground(root, appLayout, lovelace, bgroundElem) {
 
     // disable user background
     viewRoot.style.backgroundImage = 'none';
-    viewRoot.style.background = 'none';
+    viewRoot.style.background = 'transparent';
 
     return; // abort after first element with valid background
   }
