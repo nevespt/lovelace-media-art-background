@@ -98,7 +98,7 @@ const bgroundElem = document.createElement("div"); // create empty container for
 setupStyle(lovelace, bgroundElem);
 appLayout.appendChild(bgroundElem);
 //appLayout.shadowRoot.querySelector("hui-view").style.transform = "none";
-appLayout.shadowRoot.querySelector("#contentContainer").style.transform = "none";
+//appLayout.shadowRoot.querySelector("#contentContainer").style.transform = "none";
 
 setInterval(function () { setBackground(root, appLayout, lovelace, bgroundElem) }, 5000);
 setBackground(root, appLayout, lovelace, bgroundElem);
