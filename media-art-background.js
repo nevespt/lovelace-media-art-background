@@ -85,12 +85,12 @@ function setBackground(root, appLayout, lovelace, bgroundElem) {
 
 // get HA root element
 let root = document.querySelector("home-assistant");
-root = root.shadowRoot.querySelector("home-assistant-main").shadowRoot.querySelector("app-drawer-layout partial-panel-resolver ha-panel-lovelace").shadowRoot.querySelector("hui-root");
-//root = root.shadowRoot.querySelector("home-assistant-main").shadowRoot.querySelector("ha-drawer partial-panel-resolver ha-panel-lovelace").shadowRoot.querySelector("hui-root");
+//root = root.shadowRoot.querySelector("home-assistant-main").shadowRoot.querySelector("app-drawer-layout partial-panel-resolver ha-panel-lovelace").shadowRoot.querySelector("hui-root");
+root = root.shadowRoot.querySelector("home-assistant-main").shadowRoot.querySelector("ha-drawer partial-panel-resolver ha-panel-lovelace").shadowRoot.querySelector("hui-root");
 
 // get constant elements from HA root element
-const appLayout = root.shadowRoot.querySelector("ha-app-layout");
-//const appLayout = root.shadowRoot.querySelector("#view");
+//const appLayout = root.shadowRoot.querySelector("ha-app-layout");
+const appLayout = root.shadowRoot.querySelector(". ");
 const lovelace = root.lovelace;
 
 // create container element, set style and append to container
