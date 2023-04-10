@@ -85,8 +85,8 @@ function setBackground(root, appLayout, lovelace, bgroundElem) {
 
 // get HA root element
 let root = document.querySelector("home-assistant");
-//root = root.shadowRoot.querySelector("home-assistant-main").shadowRoot.querySelector("app-drawer-layout partial-panel-resolver ha-panel-lovelace").shadowRoot.querySelector("hui-root");
-root = root.shadowRoot.querySelector("home-assistant-main").shadowRoot.querySelector("ha-drawer partial-panel-resolver ha-panel-lovelace").shadowRoot.querySelector("hui-root");
+root = root.shadowRoot.querySelector("home-assistant-main").shadowRoot.querySelector("app-drawer-layout partial-panel-resolver ha-panel-lovelace").shadowRoot.querySelector("hui-root");
+//root = root.shadowRoot.querySelector("home-assistant-main").shadowRoot.querySelector("ha-drawer partial-panel-resolver ha-panel-lovelace").shadowRoot.querySelector("hui-root");
 
 // get constant elements from HA root element
 //const appLayout = root.shadowRoot.querySelector("ha-app-layout");
@@ -97,8 +97,8 @@ const lovelace = root.lovelace;
 const bgroundElem = document.createElement("div"); // create empty container for background 
 setupStyle(lovelace, bgroundElem);
 appLayout.appendChild(bgroundElem);
-appLayout.shadowRoot.querySelector("hui-view").style.transform = "none";
-//appLayout.shadowRoot.querySelector("#contentContainer").style.transform = "none";
+//appLayout.shadowRoot.querySelector("hui-view").style.transform = "none";
+appLayout.shadowRoot.querySelector("#contentContainer").style.transform = "none";
 
 setInterval(function () { setBackground(root, appLayout, lovelace, bgroundElem) }, 5000);
 setBackground(root, appLayout, lovelace, bgroundElem);
