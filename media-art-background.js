@@ -6,7 +6,7 @@ function setupStyle(lovelace, bgroundElem) {
 
   // apply style to background element
   bgroundElem.style.position = "fixed"; // fill entire window
-  bgroundElem.style.top = 40;
+  bgroundElem.style.top = "40px";
   bgroundElem.style.left = 'auto';
   bgroundElem.style.width = "100%";
   bgroundElem.style.height = "100%";
