@@ -5,9 +5,9 @@ function setupStyle(lovelace, bgroundElem) {
   let filterBlur = lovelace.config.media_art_background.blur || '10px'; // default -> blur 10 pixels
 
   // apply style to background element
-  bgroundElem.style.position = "absolute"; // fill entire window
-  bgroundElem.style.top = 0;
-  bgroundElem.style.left = 0;
+  bgroundElem.style.position = "fixed"; // fill entire window
+  bgroundElem.style.top = 40;
+  bgroundElem.style.left = auto;
   bgroundElem.style.width = "100%";
   bgroundElem.style.height = "100%";
   bgroundElem.style.maxWidth = "100vw";
@@ -17,7 +17,7 @@ function setupStyle(lovelace, bgroundElem) {
  // bgroundElem.style.transition = "opacity " + transitionOpacity;
 
   bgroundElem.style.backgroundRepeat = 'no-repeat';
-  bgroundElem.style.backgroundPosition = 'center';
+  bgroundElem.style.backgroundPosition = 'top left';
   bgroundElem.style.backgroundSize = 'cover';
   bgroundElem.style.filter = `blur(${filterBlur})`;
 
