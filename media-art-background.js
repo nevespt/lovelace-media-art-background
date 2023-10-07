@@ -14,7 +14,7 @@ function setupStyle(lovelace, bgroundElem) {
   bgroundElem.style.maxHeight = "100vh";
 
   bgroundElem.style.opacity = 0.3;
- // bgroundElem.style.transition = "opacity " + transitionOpacity;
+  bgroundElem.style.transition = "opacity " + transitionOpacity;
 
   bgroundElem.style.backgroundRepeat = 'no-repeat';
   bgroundElem.style.backgroundPosition = 'top left';
