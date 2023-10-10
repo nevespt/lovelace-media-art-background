@@ -1,7 +1,7 @@
 function setupStyle(lovelace, bgroundElem) {
 
   // load config entries
-  let transitionOpacity = lovelace.config.media_art_background.transition_opacity || "2s"; // default -> 2 seconds
+  let transitionOpacity = lovelace.config.media_art_background.transition_opacity || ".5s"; // default -> 2 seconds
   let filterBlur = lovelace.config.media_art_background.blur || '10px'; // default -> blur 10 pixels
 
   // apply style to background element
@@ -14,7 +14,7 @@ function setupStyle(lovelace, bgroundElem) {
   bgroundElem.style.maxHeight = "100vh";
 
   bgroundElem.style.opacity = 0.3;
-  bgroundElem.style.transition = "opacity " + transitionOpacity;
+  bgroundElem.style.transition = "backgroundImage " + transitionOpacity;
 
   bgroundElem.style.backgroundRepeat = 'no-repeat';
   bgroundElem.style.backgroundPosition = 'top left';
