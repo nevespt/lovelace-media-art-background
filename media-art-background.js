@@ -17,7 +17,7 @@ function setupStyle(lovelace, bgroundElem) {
   bgroundElem.style.transition = "background-image " + transitionOpacity;
 
   bgroundElem.style.backgroundRepeat = 'no-repeat';
-  bgroundElem.style.backgroundPosition = 'top left';
+  bgroundElem.style.backgroundPosition = 'center left';
   bgroundElem.style.backgroundSize = 'cover';
   bgroundElem.style.filter = `blur(${filterBlur})`;
 
