@@ -46,7 +46,7 @@ function setBackground(root, appLayout, lovelace, bgroundElem) {
     let currentview = window.location.pathname.substring(window.location.pathname.lastIndexOf('/')+1);
 
     let entityInfo = hass.states[entityName];
-    let entityImageUrl = hass.states[entityImageSource]
+    let entityImageUrl = hass.states[entityImageSource];
     
 
     if (!entityInfo) {
@@ -54,7 +54,7 @@ function setBackground(root, appLayout, lovelace, bgroundElem) {
       continue;
     }
 
-//    if (!entityValidSource.includes(entityInfo.attributes.source)) continue;
+    if (!entityValidSource.includes(entityInfo.attributes.source)) continue;
 
     if (entityValidViews) {
       if (!entityValidViews.includes(currentview)) continue; //if views have been specified check they match the current view
