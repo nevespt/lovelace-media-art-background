@@ -40,7 +40,7 @@ function setBackground(root, appLayout, lovelace, bgroundElem) {
 
     // get config attributes or default values
     let entityName = entity.entity || entity;
-    let entityValidSource = entity.valid_source || ['Vinyl'];
+    let entityValidSource = entity.valid_source || ['Vinyl', 'Spotify'];
     let entityImageSource = entity.image_source || 'input_text.coverart';
     let entityValidViews = entity.views; //get a list of valid views
     let currentview = window.location.pathname.substring(window.location.pathname.lastIndexOf('/')+1);
@@ -54,7 +54,7 @@ function setBackground(root, appLayout, lovelace, bgroundElem) {
       continue;
     }
 
-    if (!entityValidSource.includes(entityInfo.attributes.source)) continue;
+//    if (!entityValidSource.includes(entityInfo.attributes.source)) continue;
 
     if (entityValidViews) {
       if (!entityValidViews.includes(currentview)) continue; //if views have been specified check they match the current view
