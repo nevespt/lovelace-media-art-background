@@ -21,7 +21,7 @@ function setupStyle(lovelace, bgroundElem) {
   bgroundElem.style.backgroundSize = 'cover';
   bgroundElem.style.filter = `blur(${filterBlur})`;
 
-  bgroundElem.style.zIndex = -1; // below view elements
+ // bgroundElem.style.zIndex = -1; // below view elements
 }
 
 function setBackground(root, appLayout, lovelace, bgroundElem) {
