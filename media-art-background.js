@@ -1,5 +1,6 @@
 function setupStyle(lovelace, bgroundElem) {
 
+  
   // load config entries
   let transitionOpacity = lovelace.config.media_art_background.transition_opacity || ".5s"; // default -> 2 seconds
   let filterBlur = lovelace.config.media_art_background.blur || '10px'; // default -> blur 10 pixels
